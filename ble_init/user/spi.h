@@ -1,6 +1,6 @@
-/*
-	spi.h
-*/
+/**
+ * spi.h
+ */
 #ifndef SPI_H__
 #define SPI_H__
 
@@ -15,6 +15,6 @@ uint8_t Spi_ReadByte(void);
 void Spi_WriteByte(uint8_t data);
 void Spi_WriteBuf( uint32_t addr, uint8_t *buffer, uint8_t size );
 void Spi_ReadBuf( uint32_t addr, uint8_t *buffer, uint8_t size );
-
+void user_spi_uninit(void);
 
 #endif

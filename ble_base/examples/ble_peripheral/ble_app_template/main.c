@@ -77,6 +77,7 @@
 #include "nrf_ble_gatt.h"
 #include "nrf_ble_qwr.h"
 #include "nrf_pwr_mgmt.h"
+#include "spi.h"
 
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
@@ -710,6 +711,7 @@ int main(void)
     log_init();
     timers_init();
     buttons_leds_init(&erase_bonds);
+    user_spi_init();
     power_management_init();
     ble_stack_init();
     gap_params_init();
